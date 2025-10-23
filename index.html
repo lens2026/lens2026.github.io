@@ -144,6 +144,21 @@
     </ul>
   </section>
 
+  <div id="committee" class="hidden fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4" onclick="backdropClose(event,'committee')">
+    <div class="bg-white rounded-3xl p-6 w-full max-w-xl soft-shadow" onclick="event.stopPropagation()">
+      <h3 class="text-2xl font-bold mb-3">Organizing Committee</h3>
+      <ul class="list-disc pl-6 space-y-1 text-slate-800">
+        <li>Anuj Srivastava (Florida State University)</li>
+        <li>Sudeep Sarkar (University of South Florida)</li>
+        <li>Pavan Turaga (Arizona State University)</li>
+        <li>Laurent Younes (Johns Hopkins University)</li>
+      </ul>
+      <div class="mt-4 text-right">
+        <button type="button" onclick="closeDialog('committee')" class="px-4 py-2 rounded-xl bg-fuchsia-600 text-white hover:bg-fuchsia-700">Close</button>
+      </div>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer id="contact" class="mt-16">
     <div class="bg-gradient-to-r from-indigo-600 via-fuchsia-600 to-rose-500 text-white">
@@ -172,21 +187,6 @@
       </ul>
       <div class="mt-4 text-right">
         <button type="button" onclick="closeDialog('speakers')" class="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700">Close</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="committee" class="hidden fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4" onclick="backdropClose(event,'committee')">
-    <div class="bg-white rounded-3xl p-6 w-full max-w-xl soft-shadow" onclick="event.stopPropagation()">
-      <h3 class="text-2xl font-bold mb-3">Organizing Committee</h3>
-      <ul class="list-disc pl-6 space-y-1 text-slate-800">
-        <li>Anuj Srivastava (Florida State University)</li>
-        <li>Sudeep Sarkar (University of South Florida)</li>
-        <li>Pavan Turaga (Arizona State University)</li>
-        <li>Laurent Younes (Johns Hopkins University)</li>
-      </ul>
-      <div class="mt-4 text-right">
-        <button type="button" onclick="closeDialog('committee')" class="px-4 py-2 rounded-xl bg-fuchsia-600 text-white hover:bg-fuchsia-700">Close</button>
       </div>
     </div>
   </div>
