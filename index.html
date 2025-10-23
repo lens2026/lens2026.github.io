@@ -50,7 +50,7 @@
           </div>
           <div class="flex flex-wrap gap-2">
             <button type="button" onclick="openDialog('speakers')" class="px-4 py-2 rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 soft-shadow">🎤 Invited Speakers</button>
-            <button type="button" onclick="openDialog('committee')" class="px-4 py-2 rounded-xl text-white bg-fuchsia-600 hover:bg-fuchsia-700 soft-shadow">👥 Committee</button>
+            <button type="button" onclick="document.getElementById('committee').scrollIntoView({ behavior: 'smooth' });" class="px-4 py-2 rounded-xl text-white bg-fuchsia-600 hover:bg-fuchsia-700 soft-shadow">👥 Committee</button>
             <button type="button" onclick="openDialog('submissions')" class="px-4 py-2 rounded-xl text-indigo-700 bg-white border hover:bg-indigo-50 soft-shadow">📄 Submissions</button>
           </div>
         </div>
@@ -132,6 +132,16 @@
       </div>
       <p class="mt-2 text-sm text-slate-500">Exact dates will be finalized after coordination with WACV organizers (all deadlines 23:59 AoE unless noted).</p>
     </div>
+  </section>
+
+  <section id="committee">
+    <h2>Organizing Committee</h2>
+    <ul class="committee-list">
+      <li>Anuj Srivastava (Florida State University)</li>
+        <li>Sudeep Sarkar (University of South Florida)</li>
+        <li>Pavan Turaga (Arizona State University)</li>
+        <li>Laurent Younes (Johns Hopkins University)</li>
+    </ul>
   </section>
 
   <!-- Footer -->
