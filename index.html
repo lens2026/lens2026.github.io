@@ -79,8 +79,9 @@
           </div>
           <div class="flex flex-wrap gap-2">
             <button type="button" onclick="document.getElementById('speakers').scrollIntoView({ behavior: 'smooth' });" class="px-4 py-2 rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 soft-shadow">🎤 Invited Speakers</button>
-            <button type="button" onclick="document.getElementById('committee').scrollIntoView({ behavior: 'smooth' });" class="px-4 py-2 rounded-xl text-white bg-fuchsia-600 hover:bg-fuchsia-700 soft-shadow">👥 Committee</button>
-            <button type="button" onclick="document.getElementById('submissions').scrollIntoView({ behavior: 'smooth' });" class="px-4 py-2 rounded-xl text-white bg-fuchsia-600 hover:bg-fuchsia-700 soft-shadow"> 📄 Contributed Paper Submissions </button>
+            <button type="button" onclick="document.getElementById('organizing committee').scrollIntoView({ behavior: 'smooth' });" class="px-4 py-2 rounded-xl text-white bg-fuchsia-600 hover:bg-fuchsia-700 soft-shadow">👥 Committee</button>
+            <button type="button" onclick="document.getElementById('paper submissions').scrollIntoView({ behavior: 'smooth' });" class="px-4 py-2 rounded-xl text-white bg-fuchsia-600 hover:bg-fuchsia-700 soft-shadow"> 📄 Contributed Paper Submissions </button>
+            <button type="button" onclick="document.getElementById('program committee').scrollIntoView({ behavior: 'smooth' });" class="px-4 py-2 rounded-xl text-white bg-fuchsia-600 hover:bg-fuchsia-700 soft-shadow"> 👥 Program Committee </button>
             <!--<button type="button" onclick="openDialog('submissions')" class="px-4 py-2 rounded-xl text-indigo-700 bg-white border hover:bg-indigo-50 soft-shadow">📄 Submissions</button> -->
           </div>
         </div>
@@ -154,9 +155,9 @@
   <section id="submissions" class="mx-auto max-w-7xl px-4 pt-12">
     <div class="grid md:grid-cols-2 gap-8 bg-white rounded-3xl p-6 soft-shadow border border-sky-100">
       <div>
-        <h2 class="text-2xl md:text-3xl font-bold">Topics of Interest</h2>
+        <h2 class="text-2xl md:text-3xl font-bold"> Contributed Poster Papers</h2>
         <ul class="mt-4 list-disc pl-6 space-y-2 text-slate-700">
-          <li> We welcome high-quality contributed papers in the Topics of Interest list above. </li>
+          <li> We welcome high-quality contributed poster papers on the Topics of Interest list above. </li>
           <li> Link for submitting contributed papers: <br> <strong> https://openreview.net/group?id=thecvf.com/WACV/2026/Workshop/LENS </strong> </li>
           <li> Please follow WACV 2026 conference directions for formatting submitted papers. The papers will be reviewed by the LENS program committee. </li>
           <li> <strong> Previously Accepted Papers:</strong> We also welcome previously accepted papers aligned with workshop topics for presentations at the workshop 
@@ -216,13 +217,26 @@
     </div>
   </section>
 
-  <section id="committee" class="mx-auto max-w-7xl px-4 pt-12">
+  <section id="organizing committee" class="mx-auto max-w-7xl px-4 pt-12">
     <div class="bg-white rounded-3xl p-6 soft-shadow">
       <h2 class="text-2xl md:text-3xl font-bold">Organizing Committee</h2>
       <div class="mt-4 list-disc pl-6 space-y-2 text-slate-700">
         <li>Anuj Srivastava (Florida State University)</li>
         <li>Sudeep Sarkar (University of South Florida)</li>
         <li>Pavan Turaga (Arizona State University)</li>
+      </div>
+    </div>
+  </section>
+
+   <section id="program committee" class="mx-auto max-w-7xl px-4 pt-12">
+    <div class="bg-white rounded-3xl p-6 soft-shadow">
+      <h2 class="text-2xl md:text-3xl font-bold">Program Committee</h2>
+      <div class="mt-4 list-disc pl-6 space-y-2 text-slate-700">
+        <li> Boulbaba Ben Amor (Inception, UAE) </li>
+        <li> Eunsom Jeon (SeoulTech, South Korea) </li>
+        <li> Sebastian Kurtek (Ohio State University)</li>
+        <li> Ankita Shukla (University of Reno, Nevada)</li>
+        <li> Shenyuang Liyang (Traveler's Group) </li>
       </div>
     </div>
   </section>
@@ -282,7 +296,7 @@
     function backdropClose(e,id){ if(e.target.id===id){ closeDialog(id); } }
     document.addEventListener('keydown', (e)=> {
       if(e.key === 'Escape'){
-        ['speakers','committee','submissions'].forEach(id=>{
+        ['speakers','organizing committee','paper submissions','program committee'].forEach(id=>{
           const el=document.getElementById(id);
           if(el && !el.classList.contains('hidden')) closeDialog(id);
         });
